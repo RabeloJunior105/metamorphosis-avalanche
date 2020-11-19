@@ -3,7 +3,7 @@
 class Session {
 
     public function start () {
-        session_name ('@avalanche');
+        session_name ('avalanche');
         session_start();
     }
 

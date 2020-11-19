@@ -17,6 +17,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
   $login->password = $password->encrypt($login->filter($_POST['password']));
   $response = $login->join();
 }
+var_dump($_SESSION);
 
 ?>
 
@@ -27,7 +28,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
       <!-- BEGIN: Login Info -->
       <div class="hidden xl:flex flex-col min-h-screen">
         <div class="my-auto">
-          <img alt="logo" class="-intro-x w-1/2 -mt-16" src="dist/images/illustration.svg">
+          <img alt="logo" class="-intro-x w-1/2 -mt-16" src="./public/assets/images/logo 1280x.png">
           <div class="-intro-x text-white font-medium text-4xl leading-tight mt-10">
             Para iniciar sua nova
             <br>
