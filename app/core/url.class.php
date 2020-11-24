@@ -23,7 +23,12 @@ class URL extends Title
         global $db, $url, $components;
 
         if (empty($_SESSION['id'])) {
-            $this->link = 'login';
+            if ($this->link === "register"){
+                $this->link = "register";
+            }else{
+                $this->link = 'login';
+            }
+                
         }
 
         include($this->dir . $this->link . '.view.php');

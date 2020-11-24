@@ -9,15 +9,13 @@ if (isset($_SESSION['id'])) {
   $url->redirect('home');
 }
 
-
-
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
   $login->email = $login->filter($_POST['email']);
   $login->password = $password->encrypt($login->filter($_POST['password']));
   $response = $login->join();
+
 }
-var_dump($_SESSION);
 
 ?>
 
@@ -61,7 +59,7 @@ var_dump($_SESSION);
               <input type="password" name="password" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Password" require>
             </div>
             <div class="intro-x flex text-gray-700 dark:text-gray-600 text-xs sm:text-sm mt-4">
-              <a href="user/register">Clique aqui para se cadastrar</a>
+              <a href="register">Clique aqui para se cadastrar</a>
 
             </div>
             <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
